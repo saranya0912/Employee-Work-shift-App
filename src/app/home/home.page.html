@@ -1,0 +1,275 @@
+<!-- <ion-list style="overflow: scroll;"> -->
+
+  <ion-card class="card-top">
+    <div>
+      <label class = "text-bold" style="padding-left: 12px;">Enter Employee</label> 
+    </div>
+ 
+    <!-- <ion-card-content class="input-box-padding"> -->
+        <div style="display: flex; justify-content: space-evenly;">
+          <label>Total Employees</label>
+          <input class="input-element" type="number" [value] = "totalEmployees" id = "total_emp"  size="5"/>
+        </div>
+    <!-- </ion-card-content> -->
+  </ion-card>
+
+
+  <div class= "workload-div">
+    <label class="workload-label">Workload Details</label>
+    <div>
+      <fa-icon icon = "plus-circle" size ="2x" slot = "end"></fa-icon><br/>
+      <label>shift</label>
+    </div>
+  </div>
+  <ion-list>
+
+  <div style="height:295px;overflow: scroll;">
+<!-- CARD-1 -->
+    <ion-card *ngFor = "let time of userTestStatus"  class="card-padding menu-container">
+      <ion-card class = "icon-div">
+        <ion-icon style="padding-left: 8px" name="{{getImage(time.dayParts)}}" size="large"></ion-icon>
+        <div style="height: 10px;"></div>
+        <label style="padding-left: 8px">{{time.time}}</label>
+      </ion-card>
+      <div>
+        <label>SUN</label><br/>
+        <div style="height: 25px;"></div>
+        <input class="input-textbox-styling" type="number"  id ="{{time.sun.id}}" [(ngModel)]="time.sun.value" (blur)="updateTotals($event)">
+      </div>
+      <div>
+        <label>MON</label><br/>
+        <div style="height: 25px;"></div>
+        <input class="input-textbox-styling" type="number" id="{{time.mon.id}}" [(ngModel)]="time.mon.value" (blur)="updateTotals($event)">
+
+      </div>
+      <div>
+        <label>TUE</label><br/>
+        <div style="height: 25px;"></div>
+        <input class="input-textbox-styling" type="number" id="{{time.tue.id}}"  [(ngModel)]="time.tue.value" (blur)="updateTotals($event)"> 
+      </div>
+      <div>
+        <label>WED</label><br/>
+        <div style="height: 25px;"></div>
+        <input class="input-textbox-styling" type="number" id="{{time.wed.id}}" [(ngModel)] ="time.wed.value" (blur)="updateTotals($event)">
+      </div>
+      <div>
+        <label>THU</label><br/>
+        <div style="height: 25px;"></div>
+        <input class="input-textbox-styling" type="number" id="{{time.thu.id}}" [(ngModel)]="time.thu.value" (blur)="updateTotals($event)">
+      </div>
+      <div>
+        <label>FRI</label><br/>
+        <div style="height: 25px;"></div>
+        <input class="input-textbox-styling" type="number" id="{{time.fri.id}}" [(ngModel)]="time.fri.value" (blur)="updateTotals($event)">
+      </div>
+      <div>
+        <label>SAT</label><br/>
+        <div style="height: 25px;"></div>
+        <input class="input-textbox-styling" type="number" id="{{time.sat.id}}" [(ngModel)]="time.sat.value" (blur)="updateTotals($event)">
+      </div>
+    </ion-card>
+    
+  </div>
+  <div style="margin-top: 15px;margin-bottom: 100px;height: 255px;">
+    <ion-label class="totals-label"><b>Totals</b></ion-label>
+  
+    <ion-grid >
+      <ion-row>
+        <ion-col col-sm-1 class="no-padding">
+            
+      </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            SUN
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            MON
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            TUE
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            WED
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            THU
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            FRI
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            SAT
+          </ion-col>
+          
+        
+      </ion-row>
+  
+      <ion-row class = "bgcolor" style="padding-bottom: 2px;">
+        <ion-col col-sm-1 class="no-padding totalscard-icon-allign">
+          <div>
+            <ion-icon class="totalscard-icon" name="moon-outline" size="large"></ion-icon>
+            <label class="totalscard-label">MID</label>
+          </div>
+        </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="midAdd.sun" id="mid_val1" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="midAdd.mon" id="mid_val2" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="midAdd.tue" id="mid_val3" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="midAdd.wed" id="mid_val4" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="midAdd.thu" id="mid_val5" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="midAdd.fri" id="mid_val6" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="midAdd.sat" id="mid_val7" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          
+      </ion-row>
+  
+      <ion-row class = "bgcolor " style="padding-bottom: 2px;">
+        <ion-col col-sm-1 class="no-padding totalscard-icon-allign">
+          <div>
+            <ion-icon class="totalscard-icon" name="sunny-outline" size="large"></ion-icon>
+            <label class="totalscard-label">DAY</label>
+          </div>
+        </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="dayAdd.sun" id="day_val1" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="dayAdd.mon" id="day_val2" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="dayAdd.tue" id="day_val3" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="dayAdd.wed" id="day_val4" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="dayAdd.thu" id="day_val5" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="dayAdd.fri" id="day_val6" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="dayAdd.sat" id="day_val7" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          
+      </ion-row>
+      <ion-row class = "bgcolor">
+          <ion-col col-sm-1 class="no-padding totalscard-icon-allign">
+            <div>
+              <ion-icon class="totalscard-icon" name="cloudy-night-outline" size="large"></ion-icon>
+              <label class="totalscard-label">EVE</label>
+            </div>
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="eveAdd.sun" id="eve_val1" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="eveAdd.mon" id="eve_val2" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="eveAdd.tue" id="eve_val3" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="eveAdd.wed" id="eve_val4" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="eveAdd.thu" id="eve_val5" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="eveAdd.fri" id="eve_val6" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+          <ion-col col-sm-1 class="no-padding">
+            <input class="input-textbox-styling" type="number" [value]="eveAdd.sat" id="eve_val7" style="border-bottom: 0px;background-color:rgb(151, 212, 240);">
+          </ion-col>
+            
+      </ion-row>
+      <ion-row class = "bgcolor border" style="height: 36px; background-color: cornflowerblue;">
+        <ion-col col-sm-1 class="card-last">
+            
+      </ion-col>
+          <ion-col col-sm-1 class="card-last">
+            <input class="input-textbox-styling" type="number" [value]="totals.sun" id="sun" style="border-bottom: 0px;background-color:cornflowerblue;">
+          </ion-col>
+          <ion-col col-sm-1 class="card-last">
+            <input class="input-textbox-styling" type="number" [value]="totals.mon" id="mon" style="border-bottom: 0px;background-color:cornflowerblue;">
+          </ion-col>
+          <ion-col col-sm-1 class="card-last">
+            <input class="input-textbox-styling" type="number" [value]="totals.tue" id="tue" style="border-bottom: 0px;background-color:cornflowerblue;">
+          </ion-col>
+          <ion-col col-sm-1 class="card-last">
+            <input class="input-textbox-styling" type="number" [value]="totals.wed" id="wed" style="border-bottom: 0px;background-color:cornflowerblue;">
+          </ion-col>
+          <ion-col col-sm-1 class="card-last">
+            <input class="input-textbox-styling" type="number" [value]="totals.thu" id="thu" style="border-bottom: 0px;background-color:cornflowerblue;">
+          </ion-col>
+          <ion-col col-sm-1 class="card-last">
+            <input class="input-textbox-styling" type="number" [value]="totals.fri" id="fri" style="border-bottom: 0px;background-color:cornflowerblue;">
+          </ion-col>
+          <ion-col col-sm-1 class="card-last">
+            <input class="input-textbox-styling" type="number" [value]="totals.sat" id="sat" style="border-bottom: 0px;background-color:cornflowerblue;">
+          </ion-col>
+          
+      </ion-row>
+    </ion-grid>
+  
+  </div>
+
+</ion-list >   
+
+  <div style="position: fixed;bottom: 150px;right: 180px;"> 
+    
+    <ion-chip class = " exportchip-style text-color-white" size = small (click) = "generate();" style="    position: fixed;
+    bottom: 70px;
+    right: 140px">    
+      Generate
+    </ion-chip>
+  </div>
+
+  <ion-card class="menu-fixed"style="background-color: rgb(59, 99, 184)" >
+  <!-- <ion-card style="background-color: rgb(59, 99, 184)" > -->
+
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+  
+      <ion-row>
+          <div id ="container" class="menu-container">
+            <div id="home">
+              <fa-icon icon = "home" size ="2x" slot ="start" style="color:white"></fa-icon><br/>
+            </div>
+            <div id="summary"> 
+              <fa-icon icon = "clipboard" size ="2x" slot ="start" style="color:white"></fa-icon><br/>
+            </div>
+            <div id="comparison">
+              <fa-icon icon = "balance-scale" size ="2x" slot ="start" style="color:rgb(209, 209, 29)"></fa-icon><br/>
+            </div>
+            <div id="settings">
+              <fa-icon icon = "cog" size ="2x" slot ="start" style="color:rgb(88, 86, 86)"></fa-icon><br/>
+            </div>
+          </div>
+        </ion-row>
+
+    </ion-card-content>
+    <div class="menu-container" >
+      <label id="home" style="color: white;">Home</label>
+      <label id="summary" style="color: white;">Summary</label>
+      <label id="comparison" style="color: white;">Comparison</label>
+      <label id="settings" style="color: white;">Settings</label>
+    </div>
+  
+  
+  
+  
+  </ion-card>
+

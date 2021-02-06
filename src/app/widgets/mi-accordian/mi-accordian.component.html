@@ -1,0 +1,42 @@
+<!-- <div (click)="toggleAccordion()"> -->
+  <div class="menu-container child-labels card-padding active_top_cardborder" *ngIf = "!MenuOpen" (click)="toggleAccordion()" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>{{ shift }}</label>
+    <label>{{ shiftpattern }} </label>
+    <label>{{ shiftline }}</label>
+    <fa-icon icon = "chevron-up" size ="1x" style="color:black;" *ngIf="isMenuOpen"></fa-icon>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;" *ngIf="!isMenuOpen"></fa-icon>
+  </div>
+  <div
+   [ngClass]="this.isMenuOpen ? 'active' : 'inactive'">
+   <div class="menu-container active_bottom_card_style " style =" background-color: lightgrey; height: 55px">
+        <div>
+          <label>SUN</label><br/>
+          <input class="input-textbox-styling" type="number" id="{{'sun_' + shift}}">
+        </div>
+        <div>
+          <label>MON</label><br/>
+          <input class="input-textbox-styling" type="number" id="{{'mon_' + shift}}">
+        </div>
+      <div>
+        <label>TUE</label><br/>
+        <input class="input-textbox-styling" type="number" id="{{'tue_' + shift}}">
+      </div>
+      <div>
+        <label>WED</label><br/>
+        <input class="input-textbox-styling" type="number" id="{{'wed_' + shift}}">
+      </div>
+      <div>
+        <label>THU</label><br/>
+        <input class="input-textbox-styling" type="number" id="{{'thu_' + shift}}">
+      </div>
+      <div>
+        <label>FRI</label><br/>
+        <input class="input-textbox-styling" type="number" id="{{'fri_' + shift}}">
+      </div>
+      <div>
+        <label>SAT</label><br/>
+        <input class="input-textbox-styling" type="number" id="{{'sat_' + shift}}">
+      </div>
+    </div>
+  </div>

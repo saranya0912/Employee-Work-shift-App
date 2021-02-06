@@ -1,0 +1,171 @@
+
+{
+    "WorkLoadData":[
+    {
+      "id": 0,
+      "dayParts": "day",
+      "time":"2300",
+      "sun": {
+        "id": "sun_2300",
+        "value": 3
+      },
+      "mon": {
+        "id": "sun_2300",
+        "value": 3
+      },
+      "tue": {
+        "id": "sun_2300",
+        "value": 3
+      },
+      "wed": {
+        "id": "sun_2300",
+        "value": 3
+      },
+      "thu": {
+        "id": "sun_2300",
+        "value": 3
+      },
+      "fri": {
+        "id": "sun_2300",
+        "value": 3
+      },
+      "sat": {
+        "id": "sun_2300",
+        "value": 3
+      }
+    },
+    {
+        "id": 1,
+        "dayParts": "mid",
+        "time":"2400",
+        "sun":{
+          "id":"sun_2400",
+          "value":0
+        },
+        "mon":{
+          "id":"mon_2400",
+          "value":0
+        },
+         "tue":{
+          "id":"tue_2400",
+          "value":0
+        },
+         "wed":{
+          "id":"wed_2400",
+          "value":0
+        }, 
+        "thu":{
+          "id":"thu_2400",
+          "value":0
+        },
+         "fri":{
+          "id":"fri_2400",
+          "value":0
+        }, 
+        "sat":{
+          "id":"sat_2400",
+          "value":3
+        }
+      },
+      {
+        "id": 2,
+        "dayParts": "mid",
+        "time":"2500",
+        "sun":{
+          "id":"sun_2500",
+          "value":0
+        },
+        "mon":{
+          "id":"mon_2500",
+          "value":0
+        },
+         "tue":{
+          "id":"tue_2500",
+          "value":0
+        },
+         "wed":{
+          "id":"wed_2500",
+          "value":0
+        }, 
+        "thu":{
+          "id":"thu_2500",
+          "value":0
+        },
+         "fri":{
+          "id":"fri_2500",
+          "value":0
+        }, 
+        "sat":{
+          "id":"sat_2500",
+          "value":3
+        }
+      },
+      {
+        "id": 3,
+        "dayParts": "eve",
+        "time":"2600",
+        "sun":{
+          "id":"sun_2600",
+          "value":0
+        },
+        "mon":{
+          "id":"mon_2600",
+          "value":0
+        },
+         "tue":{
+          "id":"tue_2600",
+          "value":0
+        },
+         "wed":{
+          "id":"wed_2600",
+          "value":0
+        }, 
+        "thu":{
+          "id":"thu_2600",
+          "value":0
+        },
+         "fri":{
+          "id":"fri_2600",
+          "value":0
+        }, 
+        "sat":{
+          "id":"sat_2600",
+          "value":3
+        }
+      },
+      {
+        "id": 4,
+        "dayParts": "eve",
+        "time":"2700",
+        "sun": {
+          "id": "sun_2700",
+          "value": 3
+        },
+        "mon": {
+          "id": "sun_2700",
+          "value": 3
+        },
+        "tue": {
+          "id": "sun_2700",
+          "value": 3
+        },
+        "wed": {
+          "id": "sun_2700",
+          "value": 3
+        },
+        "thu": {
+          "id": "sun_2700",
+          "value": 3
+        },
+        "fri": {
+          "id": "sun_2700",
+          "value": 3
+        },
+        "sat": {
+          "id": "sun_2700",
+          "value": 3
+        }
+      }
+    ]
+  }
+    

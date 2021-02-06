@@ -1,0 +1,42 @@
+[
+    {
+        "icon": 4,
+        "sun": 3,
+        "mon": 3,
+        "tue": 3,
+        "wed": 3,
+        "thu": 3,
+        "fri": 3,
+        "sat": 5
+    },
+    {
+        "icon": 4,
+        "sun": 3,
+        "mon": 3,
+        "tue": 3,
+        "wed": 3,
+        "thu": 3,
+        "fri": 3,
+        "sat": 5
+    },
+    {
+        "icon": 4,
+        "sun": 3,
+        "mon": 3,
+        "tue": 3,
+        "wed": 3,
+        "thu": 3,
+        "fri": 3,
+        "sat": 5
+    },
+    {
+        "icon": "",
+        "sun": 3,
+        "mon": 3,
+        "tue": 3,
+        "wed": 3,
+        "thu": 3,
+        "fri": 3,
+        "sat": 5
+    }
+]

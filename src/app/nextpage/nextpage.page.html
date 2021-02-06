@@ -1,0 +1,243 @@
+<ion-list>
+<ion-card class="card-1style">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-sm-1 class="no-padding">
+          
+    </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          SUN
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          MON
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          TUE
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          WED
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          THU
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          FRI
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          SAT
+        </ion-col>     
+    </ion-row>
+
+    <ion-row class = "bgcolor border ">
+      <ion-col col-sm-1 class="no-padding text-size text-color-white">
+          Required
+    </ion-col>
+        <ion-col col-sm-1 class="no-padding text-color-white">
+          24
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding text-color-white">
+          22
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding text-color-white">
+          25
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding text-color-white">
+          25
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding text-color-white">
+          24
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding text-color-white">
+          26
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding text-color-white">
+          21
+        </ion-col>
+        
+    </ion-row>
+
+    <ion-row class = "border" style="background-color:rgb(207, 231, 241)">
+      <ion-col col-sm-1 class="no-padding text-size" >
+          Generated
+    </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          24
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          22
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          25
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          25
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          24
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          26
+        </ion-col>
+        <ion-col col-sm-1 class="no-padding">
+          21
+        </ion-col>       
+    </ion-row>
+<ion-row class="border">
+  <ion-col col-sm-6 class="no-padding">
+
+  </ion-col>
+  <ion-col col-sm-6 class="no-padding">
+    33 Shift Lines Generated
+  </ion-col>
+</ion-row>
+  </ion-grid>
+</ion-card>
+
+
+
+
+<div class= "workload-div">
+  <label class="workload-label">Generated Shift Lines</label>
+</div>
+
+<div  class = "menu-container generated-div" style="color: green;font-size: 12px; padding:7px 0px;">
+  <label>Rules</label>
+  <label>Shift</label>
+  <label>Shift Pattern</label>
+  <label>Shift Line</label>
+</div>
+<ion-card class="parentss1-cardstyle">
+  <app-mi-accordian    *ngFor="let technology of technologies"
+  shift="{{ technology.shift }}" 
+  shiftpattern="{{ technology.shiftpattern }}" 
+  shiftline="{{ technology.shiftline }}"  ></app-mi-accordian>
+</ion-card>
+
+<!-- <ion-card class=" card-2style">
+  <div class="menu-container child-labels" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>SS-2</label>
+    <label>EEDDM</label>
+    <label>X3176MX</label>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;"></fa-icon>
+  </div>
+</ion-card>
+<ion-card class=" card-2style">
+  <div class="menu-container child-labels" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>SS-3</label>
+    <label>EEDDM</label>
+    <label>X3176MX</label>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;"></fa-icon>
+  </div>
+</ion-card>
+<ion-card class=" card-2style">
+  <div class="menu-container child-labels" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>SS-4</label>
+    <label>EEDDM</label>
+    <label>X3376X</label>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;"></fa-icon>
+  </div>
+</ion-card>
+<ion-card class=" card-2style">
+  <div class="menu-container child-labels" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>SS-5</label>
+    <label>EEDDM</label>
+    <label>X33176X</label>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;"></fa-icon>
+  </div>
+</ion-card>
+<ion-card class=" card-2style">
+  <div class="menu-container child-labels" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>SS-6</label>
+    <label>EEDDM</label>
+    <label>X31766X</label>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;"></fa-icon>
+  </div>
+</ion-card>
+<ion-card class=" card-2style">
+  <div class="menu-container child-labels" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>SS-7</label>
+    <label>EEDDM</label>
+    <label>X33333X</label>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;"></fa-icon>
+  </div>
+</ion-card>
+<ion-card class=" card-2style">
+  <div class="menu-container child-labels" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>SM-1</label>
+    <label>EEDDM</label>
+    <label>XX3176M</label>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;"></fa-icon>
+  </div>
+</ion-card>
+<ion-card class=" card-2style">
+  <div class="menu-container child-labels" >
+    <fa-icon icon = "check-circle" size ="1x" style="color:blue;"></fa-icon>
+    <label>SM-2</label>
+    <label>EEDDM</label>
+    <label>XX3176M</label>
+    <fa-icon icon = "chevron-down" size ="1x" style="color:black;"></fa-icon>
+  </div>
+</ion-card> -->
+
+<div class="export-container">
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-sm-1 class="no-padding" style="font-size:10px; color: black;"><fa-icon icon = "check-circle" size ="2x" style="color:blue;"></fa-icon> Work Rules Met</ion-col>
+        <ion-col col-sm-1 class="no-padding" style="font-size:10px; color: black;"><fa-icon icon = "times-circle" size ="2x" style="color:blue;"></fa-icon> Work Rules Not Met</ion-col>
+        <ion-col col-sm-1 class="no-padding" style="font-size:10px;padding: 16px 0px; color: black;"><fa-icon icon = "star" size ="1x" style="color:blue;"></fa-icon>Modified</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div><br/>
+  <ion-chip class = "exportchip-style text-color-white" size = small>
+    Export
+  </ion-chip>
+</div>
+</ion-list>
+
+
+<div>
+  <ion-card class="menu-fixed" style="background-color: rgb(59, 99, 184)">
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+  
+      <ion-row>
+          <div id ="container" class="menu-container">
+            <div id="home">
+              <fa-icon icon = "home" size ="2x" slot ="start" style="color:white"></fa-icon><br/>
+              <!-- <label>Home</label> -->
+            </div>
+            <div id="summary"> 
+              <fa-icon icon = "clipboard" size ="2x" slot ="start" style="color:white"></fa-icon><br/>
+              <!-- <label>Summary</label> -->
+            </div>
+            <div id="comparison">
+              <fa-icon icon = "balance-scale" size ="2x" slot ="start" style="color:rgb(209, 209, 29)"></fa-icon><br/>
+            </div>
+            <div id="settings">
+              <fa-icon icon = "cog" size ="2x" slot ="start" style="color:rgb(88, 86, 86)"></fa-icon><br/>
+            </div>
+          </div>
+        </ion-row>
+
+    </ion-card-content>
+    <div class="menu-container">
+      <label id="home" style="color: white;">Home</label>
+      <label id="summary" style="color: white;">Summary</label>
+      <label id="comparison" style="color: white;">Comparison</label>
+      <label id="settings" style="color: white;">Settings</label>
+    </div>
+  
+  
+  
+  
+  </ion-card>
+</div>

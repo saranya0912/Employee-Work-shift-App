@@ -1,0 +1,59 @@
+.active {
+    display: block
+ }
+
+ .inactive {
+    display: none;
+ }
+
+ .menu-container{
+    display: flex;
+    justify-content: space-around;
+  
+  }
+  .child-labels{
+    padding-top: 11px;
+}
+
+.card-padding{
+    padding: 0%;
+    margin: 5px 10px;
+    border: 1px black;
+    height: 30px;
+  }
+
+  .input-textbox-styling{
+    width: 23px;
+    height: 25px;
+      border-top-width: 0px;
+      padding-left: 0px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      background-color: lightgray
+
+  }
+  .menu-container{
+    display: flex;
+    justify-content: space-around;
+  
+  }
+
+  .child-labels{
+    padding-top: 11px;
+}
+
+.active_top_cardborder{
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid white;
+    background-color: white;
+    margin-bottom: 0px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.active_bottom_card_style{
+    border-bottom: 1px solid black;
+    border-left:1px solid black;
+    border-right: 1px solid black;
+    border-radius: 0px 0px 10px 10px;
+    // height: 50px;
+}
